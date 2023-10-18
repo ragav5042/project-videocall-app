@@ -24,6 +24,7 @@ navigator.mediaDevices.getUserMedia({
         addVideoStream(video,userVideoStream)
     })
 })
+})
 function addVideoStream(video, stream) {
     video.srcObject = stream;
     video.addEventListener("loadedmetadata", () => {
@@ -56,4 +57,4 @@ $(function () {
 
 peer.on("open", (id) => {
     socket.emit("join-room", ROOM_ID, id);
-});
+})
